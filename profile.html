@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Profile | PT. Mahaka Teknokom Solusindo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background: #020b1c;
+        color: #ffffff;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 25px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+      }
+
+      .navbar img {
+        height: 70px;
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: #dbe7ff;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .navbar ul li a:hover {
+        color: #00b4ff;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        min-height: 100vh;
+        background: linear-gradient(
+            to bottom,
+            rgba(3, 12, 35, 0.75),
+            rgba(3, 12, 35, 0.95)
+          ),
+          url("img/bg-profile.png") center/cover no-repeat;
+        padding-top: 140px;
+        padding-bottom: 80px;
+      }
+
+      .hero-content {
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+        margin-top: 6px;
+        font-weight: 600;
+      }
+
+      .hero p {
+        margin: 18px auto;
+        font-size: 14px;
+        max-width: 650px;
+        color: #cdd9f5;
+        line-height: 1.7;
+      }
+
+      .hero .btn {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 12px 36px;
+        background: #00b4ff;
+        color: #ffffff;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .hero .btn:hover {
+        box-shadow: 0 0 25px #00b4ff;
+      }
+
+      /* ===== INFO CARD ===== */
+      .info-card {
+        background: #f6f8fc;
+        color: #0b1b3a;
+        max-width: 900px;
+        margin: 50px auto 0;
+        border-radius: 10px;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        text-align: left;
+      }
+
+      .info-card img {
+        width: 220px;
+        border-radius: 6px;
+        object-fit: cover;
+      }
+
+      .info-card p {
+        font-size: 13px;
+        line-height: 1.7;
+        color: #2b3a55;
+      }
+
+      /* ===== ABOUT SECTION ===== */
+      .about-section {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 40px;
+        text-align: left;
+      }
+
+      .about-block {
+        margin-bottom: 28px;
+      }
+
+      .about-section h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 12px;
+      }
+
+      .about-section h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 4px;
+        height: 14px;
+        background: #00b4ff;
+        border-radius: 2px;
+      }
+
+      .about-section p {
+        font-size: 18px;
+        line-height: 1.7;
+        color: #cdd9f5;
+        margin-bottom: 10px;
+      }
+
+      /* ===== CORE SERVICES ===== */
+      .about-right ul {
+        list-style: none;
+      }
+
+      .about-right li {
+        background: rgba(255, 255, 255, 0.06);
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+      }
+
+      .about-right li b {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 6px;
+        color: #ffffff;
+      }
+
+      .about-right li span {
+        font-size: 12px;
+        color: #cdd9f5;
+        line-height: 1.6;
+        display: block;
+      }
+      /* ===== ABOUT BOTTOM ===== */
+     /* ===== ABOUT SECTION ===== */
+
+
+/* ===== ABOUT BOTTOM (FIX RAPI) ===== */
+.about-bottom {
+  margin-top: 10px; /* DEKAT DENGAN ATAS */
+  text-align: left;
+}
+
+.about-bottom h4 {
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 12px;
+}
+
+.about-bottom h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 4px;
+  height: 16px;
+  background: #00b4ff;
+  border-radius: 2px;
+}
+
+/* INI KUNCI UTAMA */
+.about-bottom-text {
+  padding-left: 14px; /* SEJAJAR DENGAN ISI ABOUT US */
+  max-width: 720px;
+}
+
+.about-bottom-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #cdd9f5;
+  margin-bottom: 10px;
+}
+
+
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 900px) {
+        .info-card {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .info-card img {
+          width: 100%;
+        }
+
+        .about-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <img src="img/logo-white.png" alt="Teknokom" />
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>PT. MAHAKA TEKNOKOM</h1>
+        <h2>SOLUSINDO</h2>
+
+        <p>
+          Managed Security Services Built for Operational Resiliency. Reducing
+          cyber risk through proactive, automated, and measurable security
+          operations.
+        </p>
+
+        <a href="index.html" class="btn">Kembali ke Beranda</a>
+
+        <!-- INFO CARD -->
+        <div class="info-card">
+          <img src="img/server.png" alt="Server" />
+          <p>
+            <b>Teknokom</b> is Indonesia’s Premier Managed Security Service
+            Provider (MSSP), simply put, we are your company’s “Digital Security
+            Force”. <br /><br />
+            We are not just an IT vendor that fixes broken computers; we are a
+            strategic partner that manages, monitors, and secures your entire
+            technology infrastructure 24/7.
+          </p>
+        </div>
+
+       <!-- ABOUT SECTION -->
+<div class="about-section">
+    <!-- LEFT -->
+    <div class="about-left">
+      <div class="about-block">
+        <h4>About Us</h4>
+        <p>
+          We are an IT Services company specializing in Cyber Security and
+          IT Infrastructure Management.
+        </p>
+        <p>
+          Founded in 2019, our company has grown into a trusted partner for
+          mission-critical industries that cannot tolerate failure, such
+          as banking and multifinance sectors.
+        </p>
+      </div>
+    </div>
+  
+    <!-- RIGHT -->
+    <div class="about-right">
+      <h4>Our Core Services</h4>
+      <ul>
+        <li>
+          <b>Security</b>
+          <span>
+            Closing security gaps through Vulnerability Assessment<br />
+            Proactive Antivirus protection (Endpoint Protection)<br />
+            Server Hardening to ensure system resilience
+          </span>
+        </li>
+  
+        <li>
+          <b>Managed Services</b>
+          <span>
+            End-to-end management of our clients’ daily IT operations
+          </span>
+        </li>
+      </ul>
+    </div>
+  
+  
+  <div class="about-bottom">
+    <h4>Why We Are Different</h4>
+  
+    <div class="about-bottom-text">
+      <p>
+        We translate complex technical language into business-driven
+        solutions that management can clearly understand.
+      </p>
+      <p>
+        Our approach is human-centric, while our technical execution
+        meets enterprise-grade standards.
+      </p>
+    </div>
+  </div>
+</div>
+  
+    </section>
+  </body>
+</html>
